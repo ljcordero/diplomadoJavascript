@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: env
-      - run: ${{ github }}
+      - run: github
