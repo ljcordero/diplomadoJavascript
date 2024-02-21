@@ -13,7 +13,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
-      env:
+      - env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: |
+      - run: |
         echo "$GITHUB_CONTEXT"
