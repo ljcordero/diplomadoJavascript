@@ -6,6 +6,9 @@ on:
 
 jobs:
   cypress-filter:
-    uses: peter-evans/repository-dispatch@v3
-    with:
-      event-type: my-event
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: my-event
