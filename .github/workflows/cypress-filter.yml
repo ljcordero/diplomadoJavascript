@@ -1,4 +1,4 @@
-name: Pre flight
+name: cypress filter
 
 on:
   - pull_request
