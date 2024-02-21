@@ -5,5 +5,7 @@ on:
   - push
 
 jobs:
-  preflight-job:
-    uses: ./.github/workflows/cypress.yml
+  cypress-filter:
+    uses: peter-evans/repository-dispatch@v3
+    with:
+      event-type: my-event
