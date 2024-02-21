@@ -1,14 +1,14 @@
-name: Repository Dispatch
+name: cypress
+
 on:
-  repository_dispatch:
-    types: [my-event]
+  workflow_call:
+
 jobs:
-  myEvent:
+  test-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.client_payload.ref }}
-
-      - run: echo ${{ github.event.client_payload.sha }}
-      - run: echo ${{ github.event.client_payload.test }}
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
