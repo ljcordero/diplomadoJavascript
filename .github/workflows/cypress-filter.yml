@@ -1,4 +1,4 @@
-name: Preflight
+name: Pre flight
 
 on:
   - pull_request
@@ -6,7 +6,6 @@ on:
 
 jobs:
   preflight-job:
-    name: Preflight Step
     runs-on: ubuntu-latest
     steps:
       - run: env

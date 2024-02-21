@@ -3,7 +3,7 @@ name: Test
 on:
   workflow_run:
     workflows:
-      - Preflight
+      - Pre flight
     types:
       - completed
 
@@ -13,3 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: env
+      - run: ${{ github }}
